@@ -1,0 +1,10 @@
+i::before {
+    line-height: 1.2;
+}
+
+.active {
+    color: #1877f2;
+    border-bottom: 1px solid #1877f2;
+    border-bottom-width: 3px;
+    background-color: #f8f9fa;
+}

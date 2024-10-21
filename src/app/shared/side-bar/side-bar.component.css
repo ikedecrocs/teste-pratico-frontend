@@ -1,0 +1,44 @@
+.bg-vinho {
+    background-color: #29252e;
+}
+
+.texto-cinza {
+    color: #808080;
+}
+
+#sidebar {
+    min-width: 280px;
+    max-width: 280px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    z-index: 9999;
+}
+
+#sidebar.active {
+    min-width: 60px;
+    max-width: 60px;
+}
+
+#sidebar.active .hide-collapse {
+    display: none;
+}
+
+li:has(> button[aria-expanded="true"]) {
+    background-color: #201c24;
+}
+
+.main-dropdown[aria-expanded="true"] span {
+    color: #7bc99d !important;
+}
+
+.accordion-item {
+    background-color: #29252e;
+    border: 0;
+}
+
+nav:has(button[aria-expanded="true"]) .entity-div {
+    display: none;
+}

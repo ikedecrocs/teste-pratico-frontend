@@ -1,0 +1,11 @@
+.borda-direita {
+    border-right: 1px solid #D3D3D3;
+}
+
+.h-85 {
+    height: 85% !important;
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,14 @@
+.main-wrapper {
+    height: 100vh;  
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+.sidebar-margin {
+    margin-left: 60px
+}
+
+.nav-bar {
+    height: 8vh;
+}

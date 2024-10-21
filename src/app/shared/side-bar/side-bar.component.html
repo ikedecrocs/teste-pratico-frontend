@@ -1,0 +1,125 @@
+<nav
+  class="d-flex flex-column flex-shrink-0 pt-3 text-white h-100 bg-vinho p-0"
+  id="sidebar"
+  [ngClass]="{ active: sidebarActive === true }"
+>
+  <div class="d-flex align-items-center mb-3 px-3">
+    <a class="me-auto text-white" (click)="toggleCollapse()">
+      <i class="bi bi-list h4"></i>
+    </a>
+    <img src="/assets/logo.png" width="120" height="35" class="hide-collapse" />
+  </div>
+  <div class="hide-collapse entity-div">
+    <span class="texto-cinza ps-3">ENTITIES</span>
+    <hr class="mt-1 me-3" />
+  </div>
+  <ul
+    class="nav nav-pills flex-column mb-auto accordion accordion-flush"
+    id="sidebar-group"
+  >
+    <li class="mb-1 accordion-item">
+      <button
+        class="btn btn-toggle align-items-center rounded text-white w-100 d-flex justify-content-start main-dropdown accordion-header"
+        data-bs-toggle="collapse"
+        data-bs-target="#empresas-collapse"
+        data-parent="#sidebar-group"
+        aria-expanded="false"
+      >
+        <i
+          class="bi bi-box h5"
+          [ngClass]="{
+            'me-3': sidebarActive === false,
+            'mx-auto': sidebarActive === true
+          }"
+        ></i>
+        <span class="hide-collapse me-auto">EMPRESAS</span>
+        <i class="bi bi-chevron-down me-2 hide-collapse"></i>
+      </button>
+      <div
+        class="collapse hide-collapse accordion-collapse"
+        id="empresas-collapse"
+        data-bs-parent="#sidebar-group"
+      >
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small w-100">
+          <li class="row align-items-center w-100">
+            <div class="col-3 pe-0"><hr class="ms-4 me-3" /></div>
+            <button
+              routerLink="/empresas"
+              class="btn rounded text-white col-9 d-flex justify-content-start p-0"
+              (click)="toggleCollapse()"
+            >
+              Empresas
+            </button>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="accordion-item">
+      <button
+        class="btn btn-toggle align-items-center rounded text-white w-100 d-flex justify-content-start main-dropdown accordion-header"
+        data-bs-toggle="collapse"
+        data-bs-target="#articulos-collapse"
+        data-parent="#sidebar-group"
+        aria-expanded="false"
+      >
+        <i
+          class="bi bi-file-earmark h5"
+          [ngClass]="{
+            'me-3': sidebarActive === false,
+            'mx-auto': sidebarActive === true
+          }"
+        ></i>
+        <span class="hide-collapse me-auto">ARTICULOS</span>
+        <i class="bi bi-chevron-down me-2 hide-collapse"></i>
+      </button>
+      <div
+        class="collapse hide-collapse accordion-collapse"
+        id="articulos-collapse"
+        data-bs-parent="#sidebar-group"
+      >
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small w-100">
+          <li class="row align-items-center w-100">
+            <div class="col-3 pe-0"><hr class="ms-4 me-3" /></div>
+            <button
+              routerLink="/articulos"
+              class="btn rounded text-white col-9 d-flex justify-content-start p-0"
+              (click)="toggleCollapse()"
+            >
+              Articulos
+            </button>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="accordion-item hide-collapse">
+      <button
+        class="btn btn-toggle align-items-center rounded text-white w-100 d-flex justify-content-start main-dropdown accordion-header"
+        data-bs-toggle="collapse"
+        data-bs-target="#colaboradores-collapse"
+        data-parent="#sidebar-group"
+        aria-expanded="false"
+      >
+        <i class="bi bi-person-fill h5 me-3"></i>
+        <span class="me-auto">COLABORADORES</span>
+        <i class="bi bi-chevron-down me-2 hide-collapse"></i>
+      </button>
+      <div
+        class="collapse hide-collapse accordion-collapse"
+        id="colaboradores-collapse"
+        data-bs-parent="#sidebar-group"
+      >
+        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small w-100">
+          <li class="row align-items-center w-100">
+            <div class="col-3 pe-0"><hr class="ms-4 me-3" /></div>
+            <button
+              href="#"
+              class="btn rounded text-white col-9 d-flex justify-content-start p-0"
+            >
+              Colaboradores
+            </button>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>

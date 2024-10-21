@@ -1,0 +1,113 @@
+<div class="px-4 h-85">
+  <div class="container-fluid px-1 py-4 h-100">
+    <div class="row h-100">
+      <div class="col-md-5 mh-100">
+        <div class="container-fluid px-2 bg-white h-100">
+          <p class="fw-bold pt-4 ps-5 pb-5">INFORMACIÓN DEL CONTACTO</p>
+          <div class="row d-flex h-85">
+            <div class="col-12 text-center d-flex flex-column lh-sm">
+              <p class="fw-bold mb-0">Dirección</p>
+              <p class="mb-0">Carrera 52 # 91-66</p>
+              <p class="pb-4">Medellín Colombia</p>
+              <p class="fw-bold mb-0">Correo electrónico</p>
+              <p class="pb-4">usuarioapellido&#64;hotmail.com</p>
+              <p class="fw-bold mb-0">Sitio Web</p>
+              <a class="pb-4 mb-3">www.usuarioapellido.com</a>
+              <p class="fw-bold mb-0">Red social</p>
+              <a class="mb-0">www.instagram.com/usuarioapellido</a>
+              <a class="pb-4 mb-3">www.linkeind.com/usuarioapellido</a>
+              <p class="fw-bold mb-0">Dirección de correspondencia de correo</p>
+              <p class="mb-0">Carrera 52 # 91-66</p>
+              <p class="pb-4">Envigado Colombia</p>
+              <p class="fw-bold mb-0">Número de teléfonos</p>
+              <p class="mb-0">Fijo</p>
+              <p class="mb-3">+57 (4) 313-70-00</p>
+              <p class="mb-0">Celular</p>
+              <p class="pb-4">(312) 313-44-77</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7 mh-100">
+        <div class="container-fluid h-100">
+          <div class="col h-100">
+            <div class="row-6 pb-3 h-50">
+              <div
+                class="col-12 borda-direita text-center d-flex flex-column bg-white h-100"
+              >
+                <div
+                  id="carouselExampleIndicators"
+                  class="carousel slide h-100"
+                  data-ride="carousel"
+                >
+                  <div class="carousel-inner h-100">
+                    <div class="carousel-item active">
+                      <img
+                        class="d-block w-100"
+                        src="assets/missing-image.png"
+                        alt="First slide"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        class="d-block w-100"
+                        src="assets/missing-image.png"
+                        alt="Second slide"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        class="d-block w-100"
+                        src="assets/missing-image.png"
+                        alt="Third slide"
+                      />
+                    </div>
+                  </div>
+                  <a
+                    class="carousel-control-prev"
+                    data-target="#carouselExampleIndicators"
+                    role="button"
+                    data-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                  </a>
+                  <a
+                    class="carousel-control-next"
+                    data-target="#carouselExampleIndicators"
+                    role="button"
+                    data-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="row-6 pt-3 h-50 text-center">
+              <div
+                class="row bg-white h-100 px-5 py-4 text-secondary lh-sm overflow-auto w-100 row-articulo"
+              >
+                <div
+                  class="col-3 texto-articulo lh-sm mb-4"
+                  *ngFor="let articulo of articulos"
+                >
+                  <img
+                    class="rounded-circle border border-secondary imagem-articulo mb-3 mt-0"
+                    src="{{ articulo.imagen }}"
+                  />
+                  <p class="fs-6 mb-2">{{ articulo.titulo }}</p>
+                  {{ articulo.descripcion }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
